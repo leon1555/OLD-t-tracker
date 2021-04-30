@@ -1,0 +1,393 @@
+/*--------------------------*/
+/* BASIC SETUP */
+/*--------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: #f9f9f3;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    font-family: 'Tangerine', cursive;
+    font-style: normal;
+    font-weight:300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+}
+.mark-image {
+    float: right;
+    width: 500px;
+    height: 700px;
+    margin-right: 300px;
+    margin-top: 150px;
+    
+    background: url(Resized_20210130_163344_20210130_215546.png);
+    filter: drop-shadow(25px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*--------------------------*/
+/* MAIN IMAGE */
+/*--------------------------*/
+.wrapper {
+    margin: 5% auto 3% auto;
+    width: 705px;
+    height: 427px;
+    overflow: hidden;
+     box-shadow: 5px 5px #000;
+    border-radius: 5px 5px 5px 5px;
+}
+.img-main {
+    display: block;
+    margin: -17% auto auto auto;
+    width: 100%;
+    background: url(img/busymomsstrawberries.jpg);
+    background-size: 75%;
+    background-repeat: no-repeat;    
+}
+
+/*--------------------------*/
+/* REUSABLE COMPONENTS */
+/*--------------------------*/
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 550px;
+    color: #fff;
+    font-family: Tangerine;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200%;  
+}
+.row {
+    max-width: 1440px;
+    margin: 15% auto auto auto;
+}
+section {
+    padding: 80px 0;
+    
+}
+.box {
+    padding: 1%;
+}
+/* ---- PARAGRAPHS ---- */
+
+/*------- BUTTONS -------*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+    font-family: Tangerine;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 220%;
+    border-radius: 200px;
+    text-align: center;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; 
+}
+
+.btn-portfolio:link,
+.btn-portfolio:visited {
+    background-color: #219ebc;
+    width: 263px;
+    border: 2px solid #FFFBFB;
+    box-sizing: border-box;
+    box-shadow: 2px 5px #000;
+}
+.btn-github:link,
+.btn-github:visited {
+    width: 263px;
+    background-color: #219ebc;
+    border: 2px solid #FFFBFB;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 2px 5px #000;
+    margin-left: 265px;
+}
+.btn:hover,
+.btn:active {
+    background-color: rgb(52, 52, 52);
+}
+.btn-portfolio:hover,
+.btn-portfolio:active {
+/*    background-color: #159CB1;*/
+    border: 2px solid #FFFBFB;
+}
+.btn-github:hover,
+.btn-github:active {
+    border: 2px solid #FFFBFB;
+   
+}
+/*--------------------------*/
+/* LIFTED CORNER BANNER */
+/*--------------------------*/
+.row-2 {
+    position: absolute;
+    max-width: 794px;
+    max-height: 467px;
+    /* margin-top: 0%; */
+    margin-left: 2%;
+}
+.raised-edge {
+    background-color: rgb(52, 52, 52);
+    position: relative;
+    width: 100%;
+    height: 467px;
+    padding: 25px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    border: 5px solid white;
+    box-shadow: black 0px 0px 1px;
+}
+h1 {
+    display: block;
+    margin: auto;
+    background: linear-gradient(180deg, #f9f9f3 38.02%, #159CB1 100%, rgba(21, 156, 177, 0.35) 100%);
+    -webkit-background-clip: text;   
+    -webkit-text-fill-color: transparent;
+    font-family: 'Londrina Sketch', cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.edge-shadow:before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    width: 250px;
+    height: 50px;
+    background: black;
+    box-shadow: -15px 30px 15px rgb(0, 0, 0);
+    transform: skew(-7deg,-7deg);
+    z-index: -1;
+}
+.edge-shadow:after {
+    content: "";
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    width: 250px;
+    height: 50px;
+    background: black;
+    box-shadow: 15px 30px 15px rgb(0, 0, 0);
+    transform: skew(7deg,7deg);
+    z-index: -1;
+}
+hr {
+    margin: 10px auto;
+    width: 672px;
+    height: 0px;
+    left: 69px;
+    top: 385px;
+    border: 3px dashed #000000;
+    box-shadow: 25px 15px 4px rgba(0, 0, 0, 0.25);
+}
+h2 {
+    font-family: 'Tangerine', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    color: #219EBC;
+    text-shadow: 25px 15px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*--------------------------*/
+/* HEADER */
+/*--------------------------*/
+header {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 60%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.row-1 {
+    margin-top: 90px;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.52);
+}
+nav
+{
+    position: absolute;
+    background-color: #219EBC;
+    top: 2%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+nav a
+{
+    position: relative;
+     width: 30%; 
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Tangerine, Tangerine, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+    font-size: 64px;
+    line-height: 64px;
+    
+}
+nav a:before, nav a:after
+{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+nav a:before
+{
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+}
+nav a:after
+{
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px
+}
+/* ---- PORTFOLIO NAV ---- */
+nav a:nth-child(1) {
+  color: #f9f9f3;
+/*   right: 9%; */
+  font-family: 'Tangerine', cursive;
+}
+nav a:nth-child(1):before
+{
+    left: 42%;
+    background-color: yellow;
+ 
+}
+nav a:nth-child(1):after
+{
+    left: 44%;
+    background-color: red;
+}
+/* ---- GITHUB ---- */
+nav a:nth-child(2) {
+  color: #f9f9f3;
+}
+nav a:nth-child(2):before
+{
+    left: 43%;
+    background-color: red;
+}
+nav a:nth-child(2):after
+{
+    left: 45%;
+    background-color: yellow;
+}
+/* ---- github ---- */
+nav a:nth-child(3) {
+  color: #F9F9F3;
+}
+nav a:nth-child(3):before
+{
+    left: 43.5%;
+    background-color: red;
+}
+nav a:nth-child(3):after
+{
+    left: 45.5%;
+    background-color: yellow;
+}
+/* ---- CONTACT ---- */
+nav a:nth-child(4) {
+  color: #F9F9F3;
+}
+nav a:nth-child(4):before
+{
+    left: 25%;
+    background-color: yellow;
+ 
+}
+nav a:nth-child(4):after
+{
+    left: 30%;
+    background-color: red;
+}
+#indicator
+{
+    position: absolute;
+    left: 9%;
+    bottom: 5px;
+    width: 30px;
+    height: 3px;
+    background-color: #00FF7F;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+nav a:hover
+{
+    color: rgb(52, 52, 52);
+}
+nav a:hover:before, nav a:hover:after
+{
+    transform: scale(1);
+}
+nav a:nth-child(1):hover ~ #indicator
+{
+    background: linear-gradient(130deg, yellow, red);
+}
+nav a:nth-child(2):hover ~ #indicator
+{
+    left: 39%;
+    background: linear-gradient(130deg, red, yellow);
+}
+nav a:nth-child(3):hover ~ #indicator
+{
+    left: 69%;
+    background: linear-gradient(130deg, red, yellow);
+}
+nav a:nth-child(4):hover ~ #indicator
+{
+    left: 88.5%;
+    background: linear-gradient(130deg, yellow, red);
+   
+}
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  z-index: 125;
+}

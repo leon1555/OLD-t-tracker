@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .copy_container {​​
+        border: red 2px solid​​;
+        }
+    </style>
+    <script type="text/javascript">
+        function main(){​​
+            let template = document.querySelector("#template");
+            let output = document.querySelector('#output');
+            let input = document.querySelector('#name_input');
+            let button = document.querySelector('#copy_button');
+
+            button.addEventListener('click', function(){​​
+                let copy = template.content.cloneNode(true);
+                let p = copy.querySelector('.name_area');
+                p.innerText = input.value;
+                output.appendChild(copy);
+                }​​)
+        }​​
+        window.addEventListener('load', main);
+    </script>
+</head>
+<body>
+    <input type="text" id="name_input" placeholder="name" />
+    <button id="copy_button">Copy</button>
+    <output id="output"></output>
+    <template id="template">
+        <div class="copy_container">
+            <p>Hello World!</p>
+            <p>Pizza is good!</p>
+            <p class="name_area">Name goes here!</p>
+        </div>
+    </template>
+</body>
+</html>
