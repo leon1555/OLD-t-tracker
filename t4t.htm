@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0140)http://127.0.0.1:5500/t4t_index.html?brand=&volume=&concentration_mg=&concentration_ml=&dosage=&startdateMonth=&startdateDay=&startdateYear= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t4t</title>
+</head>
+<body>
+    <h1>New T Injection</h1>
+
+    <h2>Medication Details</h2> 
+    <form>
+    <div class="medspecs">
+        <label for="brand" class="medspecs">Brand name:</label>
+        <input type="text" class="medspecs" id="brand" name="brand"><br><br>
+        <label for="volume" class="medspecs">Total volume of vial:</label>
+        <input type="text" class="medspecs" id="volume" name="volume"> mL<br><br>
+        <span class="medspecs">Concentration:</span>
+        <input type="text" class="medspecs" id="concentration_mg" name="concentration_mg">
+        <label for="concentration_mg" class="medspecs"> mg / </label>
+        <input type="text" class="medspecs" id="concentration_ml" name="concentration_ml">
+        <label for="concentration_ml" class="medspecs"> mL</label><br><br>
+        <label for="dosage" class="medspecs">Dosage:</label>
+        <input type="text" class="medspecs" id="dosage" name="dosage"> cc<br><br>
+    </div> 
+
+    <h2>Injection Schedule</h2>
+    <div class="schedule">
+        <span class="schedule">Date of first injection: </span>
+        <label for="startdateMonth" class="schedule">Month:</label>
+        <input type="text" class="schedule" id="startdateMonth" name="startdateMonth">
+        <label for="startdateDay" class="schedule">Day:</label>
+        <input type="text" class="schedule" id="startdateDay" name="startdateDay">
+        <label for="startdateYear" class="schedule">Year:</label>
+        <input type="text" class="schedule" id="startdateYear" name="startdateYear">
+        
+        <br><br>
+
+        <h3>How often will you do your shots?</h3>
+        <input type="radio" class="schedule" id="weekly" name="period" value="weekly">
+        <label for="weekly">once a week</label><br>
+        <input type="radio" class="schedule" id="fortnight" name="period" value="fortnight">
+        <label for="fortnight">every two weeks</label><br>
+        <input type="radio" class="schedule" id="monthly" name="period" value="monthly">
+        <label for="monthly">every four weeks</label><br>
+        <input type="radio" class="schedule" id="custom" name="period" value="custom">
+        <label for="monthly">custom</label><br>
+        <label for="custom" class="schedule">How often (in days) will you inject?</label>
+        <input type="text" class="schedule" id="custom_field" name="custom_field" disabled="true">
+        
+        <br><br>
+    </div>
+
+    <h3>Injection Sites</h3>
+    <div class="sites">
+        <label for="leftbutt" class="sites">Left hip</label>
+        <input type="checkbox" class="sites" id="leftbutt" name="leftbutt"><br><br>
+        <label for="rightbutt" class="sites">Right hip</label>
+        <input type="checkbox" class="sites" id="rightbutt" name="rightbutt"><br><br>
+        <label for="leftthigh" class="sites">Left thigh</label>
+        <input type="checkbox" class="sites" id="leftthigh" name="leftthigh"><br><br>
+        <label for="rightthigh" class="sites">Right thigh</label>
+        <input type="checkbox" class="sites" id="rightthigh" name="rightthigh"><br><br>
+        <label for="leftarm" class="sites">Left arm</label>
+        <input type="checkbox" class="sites" id="leftarm" name="leftarm"><br><br>
+        <label for="rightarm" class="sites">Right arm</label>
+        <input type="checkbox" class="sites" id="rightarm" name="rightarm"><br><br>
+    </div>
+    </form>
+    <button id="button">Submit</button>
+    <p id="output">The concentration is: NaNmg/mL. The amount of T per dose is: NaNmg. The number of shots per in the vial is: NaN</p>
+    <p>[More outputs here. List of injection dates indicating dose and injection site (site will cycle through the user's indicated sites). Date when vial will be empty.]</p>
+    <script src="./t4t_files/t4t.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
