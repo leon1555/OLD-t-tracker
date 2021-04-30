@@ -1,0 +1,239 @@
+#container {
+    /* iPhone 11 Pro / X - 1 */
+    position: relative;
+    width: 375px;
+    height: 812px;
+    margin: auto;
+    padding-bottom: 16px;
+    background: whitesmoke;
+    border: solid 2px black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: monospace;
+    font-style: normal;
+    font-weight:300;
+    font-size: 20px;
+    color: rgb(0, 112, 112);
+    display: grid;
+    grid-template-rows: 120px 380px 180px 120px;
+    grid-template-areas:
+        "top_container"
+        "sites"
+        "back_regime"
+        "buttons";
+    grid-gap: 16px;
+
+}
+
+h3 {
+    font-weight:bold;
+    text-align:center;
+    font-size: 28px;
+    line-height: 24px;
+    color: rgb(0, 112, 112);
+    margin-left: 5px;
+}
+
+
+#top_container {
+    width: 375px;
+    height: 130px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
+    url("tbotbackground.png");
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px 10px 0px 0px;
+    grid-area:"top_container";
+    display: grid;
+    grid-template-areas: 
+    "logo . day ."
+     "logo . date ."
+     "logo . month ."
+      "logo . year .";
+}
+
+#logo {
+    margin: 12px;
+    width: 190px;
+    grid-area: logo;
+}
+
+#date_day {
+    grid-area: day;
+}
+
+#date_num {
+    grid-area: date;
+    font-size: 2em;
+    font-weight:bolder;
+}
+
+#date_month {
+    grid-area: month;
+}
+
+#date_year {
+    grid-area: year;
+}
+.date {
+    color: rgb(188, 255, 255);
+    text-align: center;
+}
+
+
+label {
+    font-size: 24px;
+    margin-left: 12px;
+}
+
+#injection_sites {
+    grid-area: sites;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "heading heading"
+    "lefthip lefthipcheck"
+    "righthip righthipcheck"
+    "leftthigh leftthighcheck"
+    "rightthigh rightthighcheck"
+    "leftarm leftarmcheck"
+    "rightarm rightarmcheck";
+    grid-gap: 20px;
+}
+
+#injection_site_heading {
+    grid-area: heading;
+}
+
+#lefthiplabel{
+    grid-area: lefthip;
+}
+
+#lefthip {
+    grid-area: lefthipcheck;
+}
+
+#righthiplabel{
+    grid-area: righthip;
+}
+
+#righthip{
+    grid-area: righthipcheck;
+}
+
+#leftthighlabel {
+    grid-area: leftthigh;
+}
+
+#leftthigh {
+    grid-area: leftthighcheck;
+}
+
+#rightthighlabel {
+    grid-area: rightthigh;
+}
+
+#rightthigh {
+    grid-area: rightthighcheck;
+}
+
+#leftarmlabel {
+    grid-area: leftarm;
+}
+
+#leftarm {
+    grid-area: leftarmcheck;
+}
+
+#rightarmlabel {
+    grid-area: rightarm;
+}
+
+#rightarm {
+    grid-area: rightarmcheck;
+}
+
+#back_regime{
+    grid-area: back_regime;
+}
+
+#buttons {
+    grid-area: buttons;
+    /* align-items: center;
+    justify-items: center; */
+    margin: 12px;
+}
+
+
+.button{
+    background:transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 18px;
+    margin-right: 18px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    outline:none;
+    position:relative;
+    top:0;
+    font-family: monospace;
+    text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+     transition: all 0.2s ease-in-out 0s;
+    background:#458C97;
+    color:#fff;
+    box-shadow: 0 3px 0 #2A575E;
+    border-radius:2em;
+}
+
+.button:hover{
+    background:#76C1BC;    
+}
+.button:active, .button:focus{
+    background:#458C97;
+}
+.button.press-me:focus{
+    box-shadow: 0 2px 0 #22303d;
+}
+
+.purple_button{
+    background:transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 18px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    outline:none;
+    position:relative;
+    top:0;
+    font-family: monospace;
+    text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+     transition: all 0.2s ease-in-out 0s;
+    background:#e963a1;
+    color:#fff;
+    box-shadow: 0 2px 0 #793253;
+    border-radius:20em;
+}
+
+.purple_button:hover{
+    background:#ebb0cb;    
+}
+.purple_button:active, .button:focus{
+    background:#a81658;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tBot log an injection</title>
+    <link rel="stylesheet" href="tbot_log_new.css">
+    <script src="tbot_log_new.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="top_container">
+            <img src="tbotlogo.png" id="logo">
+            <div class="date" id="date_day"></div>
+            <div class="date" id="date_num"></div>
+            <div class="date" id="date_month"></div>
+            <div class="date" id="date_year"></div>
+        </div>
+        <div id="header_injection">
+            <h3>log an injection</h3>
+            <div id="med_id"></div><br>
+            <div id="dose_id"></div>
+        </div>
+        <div id="selection_injection">
+            <label for="injection_date">injection date:</label>
+            <input type="date" id="injection_date"><br><br>
+            <label for="injection_site">injection site:</label>
+            <select class="select-css" name="sites" id="sites"></select>
+        </div>
+        <div id="button_injection">
+            <button type="button" class="purple_button" id="log_injection">log injection</button>
+            <!-- CONFIRMATION TEXT HERE -->
+        </div>
+        <a class="button" id="return_main" href="tbot_main.html">back to main</a>
+    </div>
+</body>
+</html>

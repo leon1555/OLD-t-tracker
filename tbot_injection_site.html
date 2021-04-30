@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tBot Injection Site Selector</title>
+    <link rel="stylesheet" href="tbot_injection_site.css">
+</head>
+<body>
+    <div id="container">
+        <div id="top_container">
+            <img src="tbotlogo.png" id="logo">
+            <div class="date" id="date_day"></div>
+            <div class="date" id="date_num"></div>
+            <div class="date" id="date_month"></div>
+            <div class="date" id="date_year"></div>
+            <div id="date"></div>
+        </div>
+        <div class="sites" id="injection_sites">
+            <h3 id="injection_site_heading">injection sites</h3>
+            <label for="lefthip" id="lefthiplabel" class="sites">Left hip</label>
+            <input type="checkbox" class="sites" id="lefthip" name="lefthip"><br><br>
+            <label for="righthip" id="righthiplabel" class="sites">Right hip</label>
+            <input type="checkbox" class="sites" id="righthip" name="righthip"><br><br>
+            <label for="leftthigh" id="leftthighlabel" class="sites">Left thigh</label>
+            <input type="checkbox" class="sites" id="leftthigh" name="leftthigh"><br><br>
+            <label for="rightthigh" id="rightthighlabel" class="sites">Right thigh</label>
+            <input type="checkbox" class="sites" id="rightthigh" name="rightthigh"><br><br>
+            <label for="leftarm" id="leftarmlabel" class="sites">Left arm</label>
+            <input type="checkbox" class="sites" id="leftarm" name="leftarm"><br><br>
+            <label for="rightarm" id="rightarmlabel" class="sites">Right arm</label>
+            <input type="checkbox" class="sites" id="rightarm" name="rightarm"><br><br>
+        </div>
+        <div id="back_regime">
+            <button type="button" class="purple_button" id="savebutton" name="savebutton">save sites</button>
+        </div>
+        <div id="buttons">
+            <a class="button" id="return_main" href="tbot_main.html">back to main</a>
+        </div>
+    </div>
+    <script src="tbot_injection_site.js"></script>
+</body>
+</html>

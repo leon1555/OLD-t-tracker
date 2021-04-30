@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tBot New Injection Regime</title>
+    <link rel="stylesheet" href="tbot_new_plan.css">
+</head>
+<body>
+    <div id="container">
+        <div id="top_container">
+            <img src="tbotlogo.png" id="logo">
+            <div class="date" id="date_day"></div>
+            <div class="date" id="date_num"></div>
+            <div class="date" id="date_month"></div>
+            <div class="date" id="date_year"></div>
+        </div>
+        <div id="med_box">
+            <h3>new injection regime</h3>
+            <label for="brand" class="medspecs">brand name:</label>
+            <input type="text" class="medspecs" id="brand" name="brand" placeholder="Depo-Testosterone"><br><br>
+            <label for="volume" class="medspecs">volume of vial:</label>
+            <input type="text" class="medspecs" id="volume" name="volume" placeholder="10"> <span>mL</span><br><br>
+            <span class="medspecs">concentration:</span>
+            <input type="text" class="medspecs" id="concentration_mg" name="concentration_mg" placeholder="1000">
+            <label for="concentration_mg" class="medspecs">mg /</label>
+            <input type="text" class="medspecs" id="concentration_ml" name="concentration_ml" placeholder="10">
+            <label for="concentration_ml" class="medspecs"> mL</label><br><br>
+            <label for="dosage" class="medspecs">dosage:</label>
+            <input type="text" class="medspecs" id="dosage" name="dosage" placeholder="1"> <span>cc</span><br>
+        </div>
+
+        <div id="schedule" class="schedule">
+            <span class="calendar">start date: </span>
+            <input type="date" class="calendar" id="startdate" name="startdate">
+            <br>
+
+            <form>
+                <h4>how often will you inject?</h4>
+                <input type="radio" class="schedule" id="weekly" name="period" value="weekly">
+                <label class="period" for="weekly">once a week</label><br>
+                <input type="radio" class="schedule" id="fortnight" name="period" value="fortnight">
+                <label class="period" for="fortnight">every two weeks</label><br>
+                <input type="radio" class="schedule" id="monthly" name="period" value="monthly">
+                <label class="period" for="monthly">every four weeks</label><br>
+                <input type="radio" class="schedule" id="custom" name="period" value="custom">
+                <label class="period" for="custom">custom: every</label>
+                <input type="text" class="schedule" id="custom_field" name="custom_field" disabled="true"><span id="days"> days</span>
+            </form>
+        </div>
+        <button class="purple_button" type="button" id="savebutton" name="savebutton">save regime</button><br>
+        <div id="injection_sites_link">
+            <button type="button" class="main_buttons" id="add_injection_sites" onClick="location.href='tbot_injection_site.html'">+</button>
+            <label for="add_injection_sites" id="add_sites_text">add injection sites</label>
+        </div>
+        <div id="buttons">
+            <a class="button" id="return_main" href="tbot_main.html">back to main</a>
+        </div>
+    </div>
+    <script src="tbot_new_plan.js"></script>
+</body>
+</html>

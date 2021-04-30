@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tbot_login.css">
+    <title>tBot Login</title>
+</head>
+<body>
+    <div id="login_container">
+        <img src="tbotlogo.png" id="logo">
+        <div id="message">your trusty T tracker</div>
+        <div id="login_details">
+            <label for="username" id="username_label">username</label><br>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password" id="password_label">password</label><br>
+            <input type="password" id="password" name="password"><br><br>
+        </div>
+        <div id="login_buttons">
+            <button type="button" class="button_login" id="login_button" onClick="location.href='tbot_main.html'">Login</button>
+            <button type="button" class="button_login" id="signup_button">Sign Up</button>
+        </div>
+    </div>
+    <script src="tbot_login.js"></script>
+</body>
+</html>

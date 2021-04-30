@@ -1,0 +1,185 @@
+#container {
+    /* iPhone 11 Pro / X - 1 */
+    position: relative;
+    width: 375px;
+    height: 812px;
+    margin: auto;
+    background: whitesmoke;
+    border: solid 2px black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: monospace;
+    font-style: normal;
+    font-weight:300;
+    font-size: 20px;
+    color: rgb(0, 112, 112);
+    display: grid;
+    grid-template-areas:
+        "top_container"
+        "user_profile"
+        "links"
+
+}
+
+.purple {
+    color: #9E3163;
+}
+
+#header, #future_injections, #empty, #return_main, #header_injection, #selection_injection {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+h3 {
+
+    font-weight:bold;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    color: rgb(0, 112, 112);
+}
+
+#top_container {
+    width: 375px;
+    height: 130px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
+    url("tbotbackground.png");
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px 10px 0px 0px;
+    grid-area:top_container;
+    display: grid;
+    grid-template-areas: 
+    "logo . day ."
+     "logo . date ."
+     "logo . month ."
+      "logo . year .";
+}
+
+#logo {
+    margin: 12px;
+    width: 190px;
+    grid-area: logo;
+}
+
+#date_day {
+    grid-area: day;
+}
+
+#date_num {
+    grid-area: date;
+    font-size: 2em;
+    font-weight:bolder;
+}
+
+#date_month {
+    grid-area: month;
+}
+
+#date_year {
+    grid-area: year;
+}
+.date {
+    color: rgb(188, 255, 255);
+    text-align: center;
+}
+
+.button{
+    background:transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 18px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    outline:none;
+    position:relative;
+    top:0;
+    font-family: monospace;
+    text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+     transition: all 0.2s ease-in-out 0s;
+    background:#458C97;
+    color:#fff;
+    box-shadow: 0 3px 0 #2A575E;
+    border-radius:20em;
+}
+
+.button:hover{
+    background:#76C1BC;    
+}
+.button:active, .button:focus{
+    background:#458C97;
+}
+.button.press-me:focus{
+    box-shadow: 0 2px 0 #22303d;
+}
+
+/* modified from https://css-tricks.com/styling-a-select-like-its-2019/ */
+.select-css {
+  display: block;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: 700;
+  color: rgb(0, 112, 112);
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  width: 100%;
+  max-width: 90%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #458C97;;
+  box-shadow: 0 1px 0 1px #2A575E;
+  border-radius: .5em;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23458C97%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right .7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: .65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+  display: none;
+}
+/* Hover style */
+.select-css:hover {
+  border-color: #2A575E;
+}
+/* Focus style */
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px #2A575E;
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #9E3163; 
+  outline: none;
+}
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #174c50;
+    font-family: monospace;
+    font-size: 18px;
+    border:1px solid #458C97;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+input[type="date"], focus {
+    color: #458C97;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border-radius: .5em;
+}

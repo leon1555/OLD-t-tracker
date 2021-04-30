@@ -1,0 +1,120 @@
+#container {
+    /* iPhone 11 Pro / X - 1 */
+    position: relative;
+    width: 375px;
+    height: 812px;
+    margin: auto;
+    background: whitesmoke;
+    border: solid 2px black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: monospace;
+    font-style: normal;
+    font-weight:300;
+    font-size: 20px;
+    color: rgb(0, 112, 112);
+    display: grid;
+    grid-template-areas:
+        "top_container"
+        "med_details"
+        "button"
+}
+
+.purple {
+    color: #9E3163;
+}
+
+#medication, #dosage, #concentration, #tPerDose, #shots_vial {
+    margin-left: 20px;
+    margin-right: 12px;
+}
+
+h3 {
+    font-weight:bold;
+    font-size: 1.2em;
+    line-height: .5em;
+    color: rgb(0, 112, 112);
+    text-align: center;
+}
+
+#top_container {
+    width: 375px;
+    height: 130px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
+    url("tbotbackground.png");
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px 10px 0px 0px;
+    grid-area:top_container;
+    display: grid;
+    grid-template-areas: 
+    "logo . day ."
+     "logo . date ."
+     "logo . month ."
+      "logo . year .";
+}
+
+#logo {
+    margin: 12px;
+    width: 190px;
+    grid-area: logo;
+}
+
+#date_day {
+    grid-area: day;
+}
+
+#date_num {
+    grid-area: date;
+    font-size: 2em;
+    font-weight:bolder;
+}
+
+#date_month {
+    grid-area: month;
+}
+
+#date_year {
+    grid-area: year;
+}
+.date {
+    color: rgb(188, 255, 255);
+    text-align: center;
+}
+
+.button{
+    background:transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 18px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    outline:none;
+    position:relative;
+    top:0;
+    font-family: monospace;
+    text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+     transition: all 0.2s ease-in-out 0s;
+    background:#458C97;
+    color:#fff;
+    box-shadow: 0 3px 0 #2A575E;
+    border-radius:20em;
+}
+
+.button:hover{
+    background:#76C1BC;    
+}
+.button:active, .button:focus{
+    background:#458C97;
+}
+.button.press-me:focus{
+    box-shadow: 0 2px 0 #22303d;
+}
